@@ -22,7 +22,7 @@ const Counter = useCounterStore();
           ><img src="@/assets/icons/PhoneWhite.svg" alt=""
         /></a>
         <a href="tel:+998990000441" class="nav__right-text-1" to="/"
-          >+998(99) 000 04 41</a
+          >+998(99) 000 04 411</a
         >
         <RouterLink class="nav__right-text-2" to="/prodayte"
           >{{ leng.prodOlcha }}</RouterLink
