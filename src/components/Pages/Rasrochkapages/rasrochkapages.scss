@@ -1,0 +1,38 @@
+.rasrochkapages{
+    padding:0px 50px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    &__logo{
+        font-size: 32px;
+        font-weight: 600;
+    }
+    &__text-1{
+        font-size: 22px;
+        font-weight: 600;
+    }
+    &__text-2{
+        font-size: 22px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    &__text-3{
+        font-size: 22px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    &__img-1{
+   
+        width: 50%;
+        margin: 0 auto;
+        @media screen and (max-width:480px) {
+            width: 100%;
+        }
+    }
+    &__img-2{
+ 
+        width: 80%;
+        margin: 0 auto;
+        @media screen and (max-width:480px) {
+            width: 100%;
+        }
+    }
+}

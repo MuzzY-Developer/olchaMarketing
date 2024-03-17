@@ -1,0 +1,28 @@
+.dostavkapages{
+    padding:0px 50px;
+    &__text-1{
+     font-size: 32px;
+     font-weight: 600;
+    }
+    &__text-2{
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 50px;
+       }
+    &__text-3{
+        margin-top: 30px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    &__text-4{
+        margin-top: 30px;
+       font-weight:500;
+    }
+    &__text-5{
+        margin-top: 10px;
+       font-weight:500;
+    }
+    &__text-6{
+        margin-top: 30px;
+       font-weight:500;
+    }
+}

@@ -1,0 +1,12 @@
+.ecofriendlypages{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    padding:10px 50px;
+    &__logo{
+      font-size: 32px
+    }
+    &__text-1{
+    
+    }
+}

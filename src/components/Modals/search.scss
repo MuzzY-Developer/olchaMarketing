@@ -1,0 +1,32 @@
+.header__navigation__products {
+    border-radius: 8px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 99;
+    max-height: 500px;
+    overflow-x: auto;
+    &-card {
+        width: 100%;
+        border-bottom: 1px solid red;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 15px;
+        position: relative;
+
+        img {
+            width: 30px;
+        }
+
+    }
+
+    &-card:hover {
+        background: whitesmoke;
+    }
+}

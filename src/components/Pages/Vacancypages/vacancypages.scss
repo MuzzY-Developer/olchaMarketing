@@ -1,0 +1,14 @@
+.vacancypages{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    padding:10px;
+    &__logo{
+      font-size: 32px
+    }
+    &__text-1{
+        span{
+            font-weight: 600;
+        }
+    }
+}

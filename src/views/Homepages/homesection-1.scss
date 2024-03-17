@@ -1,0 +1,104 @@
+.HomeIntro {
+    width: 100%;
+    display: flex;
+    gap:20px;
+    @media screen and (max-width:992px) {
+         flex-direction: column;
+    }
+    &__aksiya{
+        border:2px solid #DA002B;
+        padding:10px;
+        border-radius: 8px;
+        &-con{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:5px;
+            @media screen and (max-width:320px) {
+                flex-direction: column;
+                gap:5px;
+            }
+            &-title{
+                h3{
+                    font-size: 16px;
+                    font-weight: 600;
+                    span{
+                        font-size: 16px;
+                        color: #DA002B;
+                    }
+                }
+            }
+            &-clock{
+                display: flex;
+                align-items: center;
+                gap:5px;
+                p{
+                 border:1px solid black;
+                 padding:5px;
+                 border-radius: 4px;
+                }
+             }
+        }
+     
+    }
+    .swiperaksiya{
+        max-width: 350px;
+    }
+    .swiperIntro{
+        max-width: 1000px;
+        width: 100%;
+        &-img{
+         width: 100%;
+         max-height: 400px;
+         mix-blend-mode: darken;
+         aspect-ratio: 1/1;
+         object-fit: contain;
+         border-radius: 8px;
+         padding:10px;
+        }
+       .swiper-button-prev{
+           left: 5px !important;
+           padding: 18px !important;
+           border-radius: 50%;
+           border: 2px solid rgba(143, 41, 41, 0.2);
+           opacity: 0;
+           transition: 0.5s;
+         &:hover{
+          transform: scale(1.1) !important;
+          border: 2px solid rgba(0, 115, 103, 0.2);
+         }
+      }
+      .swiper-button-next{
+          right: 5px !important;
+          padding: 18px !important;
+          border-radius: 50%;
+          border: 2px solid rgba(143, 41, 41, 0.2);
+          opacity: 0;
+          transition: 0.5s;
+        &:hover{
+         transform: scale(1.1) !important;
+         border: 2px solid rgba(0, 115, 103, 0.2);
+        }
+      }
+      .swiper-button-prev::after{
+          color: #6c0116;
+          font-size: 20px !important;
+      }
+      .swiper-button-next::after{
+          color: #6c0116;
+          font-size: 20px !important;
+      }
+      &:hover{
+       .swiper-button-prev{
+           opacity: 100;
+       }
+       .swiper-button-next{
+           opacity: 100;
+       }
+      }
+   }
+}
+.corusel-1 {
+    padding: 50px !important;
+    z-index: 0 !important;
+}

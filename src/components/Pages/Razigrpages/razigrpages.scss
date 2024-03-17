@@ -1,0 +1,16 @@
+.razigrpages{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    &__logo{
+        text-align: center;
+    background: red;
+    font-size: 32px;
+    }
+    &_text-1{
+        font-size: 22px;
+    }
+    &_text-2{
+        font-size: 22px;
+    }
+}
