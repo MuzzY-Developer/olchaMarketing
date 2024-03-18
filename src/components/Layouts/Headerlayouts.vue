@@ -37,20 +37,15 @@ const test = ref(window.innerWidth > 768 ? 12 : 4)
 
 
 
-
-
-
-
-
 const currentPage = ref(+route.query.page || 1);
 
 watch(
   search,
   debounce(() => {
     if (search.value.length > 0) {
-    CounterProduct.getFetchProducts(currentPage.value * test.value - test.value, search.value)
+    CounterProduct.getFetchProducts(currentPage.value * test.value - test.value, search.value.trim())
   } else {
-    CounterProduct.getFetchProducts(+route.query.page || 1 * test.value - test.value, search.value)
+    CounterProduct.getFetchProducts(CounterProduct.page * test.value - test.value, search.value.trim())
   }
   }, 1000)
 );
@@ -105,11 +100,12 @@ watch(
                   CounterStore.bodyhiddenopen(),
                   (CounterStore.categorymodal = false)
               "
-              :class="{ activeinput: CounterStore.bgblack }"
-              type="text"
+              :class="{ 'activeinput': CounterStore.bgblack }"
+              type="search"
               v-model="search"
               :placeholder="leng.hdpoisktext"
               @input="CounterStore.searchproduct($event.target.value)"
+          
             />
             <RouterLink
               class="header__navigation__search-btn"

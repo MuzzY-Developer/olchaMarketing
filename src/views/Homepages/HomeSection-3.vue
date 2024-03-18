@@ -11,7 +11,7 @@ CounterProduct.getFetchProductsPopular()
 <template>
    <section>
     <h2>{{ leng.populartext }}</h2>
-     <Swiper :smartphones="CounterProduct.productpopular"/>
+     <Swiper v-if="CounterProduct.productpopular"  :smartphones="CounterProduct?.productpopular"/>
    </section>
 </template>
 

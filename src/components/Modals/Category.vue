@@ -7,14 +7,13 @@ const leng = useLeng();
 const CounterProduct = useCounterProduct();
 const CounterStore = useCounterStore();
 const route = useRoute()
-console.log(+route.query.page || 1)
 </script>
 
 
 <template>
   <div
     class="header__modal"
-    :class="{ activemodal: CounterStore.categorymodal }"
+    :class="{ 'activemodal': CounterStore.categorymodal }"
   >
     <h4>{{ leng.hdcatalog }}</h4>
     <div class="header__modal-cards">

@@ -12,7 +12,7 @@ CounterProduct.getFetchProductsSmartphones()
 <template>
    <section>
     <h2>{{leng.smartphonetext}}</h2>
-     <Swiper :smartphones="CounterProduct.productsmartphones"/>
+     <Swiper v-if="CounterProduct.productsmartphones" :smartphones="CounterProduct?.productsmartphones"/>
    </section>
 </template>
 

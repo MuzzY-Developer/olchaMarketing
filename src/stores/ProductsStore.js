@@ -17,39 +17,26 @@ export const useCounterProduct = defineStore("product", {
     chexboxe2: true,
     chexboxe3: true,
     // tester: null,
+    page: 1
   }),
   actions: {
-    // adaptation(test) {
-    //   this.tester = test;
-    //   console.log(this.tester);
-    // },
     async getFetchProducts(skip = 0, search = "", limit=12) {
       try {
         const res = await apiProducts.getProduct(skip, search, limit);
         this.product = res.products;
         this.total = res.total;
-        // search ? (this.similar = res.products.length) : (this.similar = 100);
       } catch (error) {
         console.error(error);
       }
     },
-    // async getSearch(search) {
-    //   try {
-    //     const res = await apiProducts.getSearch(search);
-    //     this.product = res.products;
-    //     this.total = res.total;
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    // },
+    testFn(page) {
+      this.page = page
+    },
 
     async getFetchProductsAll(skip = 0, limit = 100) {
       try {
         const res = await apiProducts.getProductAll(skip = 0, limit = 100);
-        this.productall = res.products;
-   
-        console.log(this.productall)
-    
+        this.productall = res.products;    
       } catch (error) {
         console.error(error);
       }

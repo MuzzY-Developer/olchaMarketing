@@ -32,6 +32,7 @@ function onClickHandler(page) {
     router.push(`/product/?page=${page}`);
   }
   CounterProduct.getFetchProducts(page * test.value - test.value, "", test.value);
+  CounterProduct.testFn(page)
 }
 function notfound(){
   if(+route.query.page > 9 && test.value == 12){
@@ -52,7 +53,7 @@ watch(sort, () => {
     CounterProduct.sortproductPrice();
   }
 });
-console.log(+route.query.page || 1)
+
 </script>
 
 <template>
@@ -88,7 +89,6 @@ console.log(+route.query.page || 1)
           {{ leng.sortpricetext }}
         </option>
       </select>
-      <h1>{{ width }}</h1>
     </div>
     <div class="pagination-cards">
       <Card

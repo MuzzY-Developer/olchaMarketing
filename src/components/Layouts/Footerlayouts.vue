@@ -1,7 +1,8 @@
 <script setup>
 import { useLeng } from "@/stores/Lenguage"
 const leng = useLeng()
-
+import { useCounterStore } from "@/stores/counter";
+const CounterStore = useCounterStore()
 </script>
 
 <template>
@@ -34,7 +35,7 @@ const leng = useLeng()
                     <h3 class="footer__inform-con-2-info-infotxt">{{leng.ftinfo}}</h3>
                      <ul>
                         <li v-for="item in leng.ftinform" :key="item">
-                        <RouterLink :to="'/'+item.path" >{{ item.name }} </RouterLink></li>
+                        <RouterLink :to="'/'+item.path" @click="CounterStore.scrollTop()">{{ item.name }} </RouterLink></li>
                      </ul>
                  </div>
                  <div class="footer__inform-con-3-paymestores">

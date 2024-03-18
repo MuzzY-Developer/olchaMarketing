@@ -2,11 +2,10 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { EffectCube, Pagination } from "swiper/modules";
 import { useCounterStore } from "@/stores/counter";
-import { useCounterProduct } from "@/stores/ProductsStore";
 import { useLeng } from "@/stores/Lenguage";
 const leng = useLeng()
 const CounterStore = useCounterStore()
-const CounterProduct = useCounterProduct()
+
 import "swiper/css/navigation";
 // ~~~~~~~~`~~~~~~~~~`
 

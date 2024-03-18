@@ -18,7 +18,7 @@ CounterProduct.getFetchProductsAksiya(random);
 <template>
   <section>
     <div class="HomeIntro">
-      <SwiperIntro :intro="CounterProduct.productpopular" />
+      <SwiperIntro  v-if="CounterProduct.productpopular" :intro="CounterProduct?.productpopular" />
       <div class="HomeIntro__aksiya">
         <div class="HomeIntro__aksiya-con">
           <div class="HomeIntro__aksiya-con-title"><h3>{{leng.skidkatext1}} <span>{{leng.skidkatext2}}</span></h3></div>
@@ -31,7 +31,7 @@ CounterProduct.getFetchProductsAksiya(random);
           </div>
         </div>
 
-        <SwiperAksiya :aksiya="CounterProduct.productaksiya" />
+        <SwiperAksiya v-if="CounterProduct.productaksiya" :aksiya="CounterProduct?.productaksiya" />
       </div>
     </div>
   </section>

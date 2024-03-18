@@ -63,7 +63,7 @@ export const useCounterStore = defineStore("counter", {
     },
     searchproduct(text){
        this.search = text
-       console.log(text)
+      
        if(text.length > 0){
           this.searchmodal = true
        } else{
@@ -101,13 +101,6 @@ export const useCounterStore = defineStore("counter", {
       this.totalbasketamount -= amount;
       this.totalprice -= totalSum;
     },
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -192,34 +185,12 @@ export const useCounterStore = defineStore("counter", {
     bodyhiddenclosed() {
       document.body.classList.remove("activebody");
     },
-
-    // addToBasket(tovar){
-    //    const idbasket = this.basketProduct.find((item) => item.id == tovar.id)
-    //  if(idbasket?.id !== tovar.id){
-    //   this.basketProduct.push(tovar)
-    //  }
-    //  console.log(this.basketProduct)
-    //    },
-
-    // deleteTobasket(id){
-    //     const index = this.basketProduct.findIndex((item) => {
-    //       return item.id == id;
-    //      })
-
-    //   this.basketProduct.splice(index, 1)
-    //   this.total -= id.price
-    //    },
-    //    addpricetovar(item){
-
-    //       this.total +=item
-    //    },
-
-    // totalAmount(){
-    //    let num = 0
-    //   this.basketProduct.forEach(element => {
-    //    this.total = num+=element.price
-    //  });
-    //  },
+    scrollTop(){
+      window.scrollTo({
+        behavior:'smooth',
+        top:0,
+      })
+    }
   },
   persist: true,
 });
