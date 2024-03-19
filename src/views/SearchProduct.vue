@@ -2,7 +2,7 @@
 import Card from "@/components/Cards/Card.vue";
 import { useCounterProduct } from "@/stores/ProductsStore";
 import { useLeng } from "@/stores/Lenguage";
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref} from "vue";
 import { useRoute, useRouter } from "vue-router";
 const leng = useLeng();
 const CounterProduct = useCounterProduct();
@@ -42,9 +42,6 @@ function notfound(){
   }
 }
 notfound()
-const sort = ref("Auto");
-
-
 
 </script>
 
@@ -69,8 +66,20 @@ const sort = ref("Auto");
         </span>
       </template>
     </vue-awesome-paginate>
-    <div class="pagination__sort">
+    <Empty v-if="!CounterProduct.product.length">
+      <section>
+    <div class="notfound">
+    <img src="@/assets/images/sorry.png" alt="">
+       <div class="notfound__con" v-for="item in leng.nodfoundpages" :key="item">
+        <h3 class="notfound__con-title">
+         {{ leng.notfoundpgtext }}
+        </h3>
+        <p class="notfound__con-subtitle"> {{ item.text2 }}</p>
+        <RouterLink to="/">{{ item.text3 }}</RouterLink>
+       </div>
     </div>
+  </section>
+      </Empty>
     <div class="pagination-cards">
       <Card
         v-for="item in CounterProduct.product"

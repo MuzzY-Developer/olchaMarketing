@@ -81,6 +81,7 @@ export const useLeng = defineStore('useleng', {
         prodavaytepages:prodavaytepagesRUS,
          // nodfound//
         nodfoundpages:notfoundpagesRUS,
+        notfoundpgtext:"извините по вашему запросу ничего не найдено",
         // footer~~~~~~~~~~~~~~~~~~~
         ftappstoretext:"Наше мобильное приложение доступно в AppGallery, App store и Google play",
 
@@ -121,6 +122,7 @@ export const useLeng = defineStore('useleng', {
                 this.razigrpages= razigrpagesUZB,
                 this.prodavaytepages =prodavaytepagesUZB,
                 this.nodfoundpages = notfoundpagesUZB,
+                this.notfoundpgtext="Sizning so'rovingiz bo'yicha hich narsa topilmadi",
                 this.cardid =cardidUZB,
                 this.account = accountUZB,
                 this.navigationtext ="Navigatsiya",
@@ -165,6 +167,7 @@ export const useLeng = defineStore('useleng', {
                 this.razigrpages= razigrpagesRUS,
                 this.prodavaytepages =prodavaytepagesRUS,
                 this.nodfoundpages = notfoundpagesRUS,
+                this.notfoundpgtext="извините по вашему запросу ничего не найдено",
                 this.cardid =cardidRUS,
                 this.account = accountRUS,
                 this.navigationtext ="Навигация",

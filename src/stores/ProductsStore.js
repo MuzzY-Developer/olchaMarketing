@@ -11,12 +11,11 @@ export const useCounterProduct = defineStore("product", {
     productsmartphones: null,
     productpopular: null,
     productaksiya: null,
-    total: null,
+    total: 0,
     sortpoputext: "По итогу",
     chexboxe1: false,
     chexboxe2: true,
     chexboxe3: true,
-    // tester: null,
     page: 1
   }),
   actions: {

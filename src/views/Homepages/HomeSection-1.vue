@@ -4,7 +4,6 @@ import SwiperAksiya from "@/components/Swiper/SwiperAksiya.vue";
 import { useCounterProduct } from "@/stores/ProductsStore";
 import { useCounterStore } from "@/stores/counter";
 const CounterStore = useCounterStore()
-import { ref } from "vue";
 import { useLeng } from "@/stores/Lenguage";
 const leng =useLeng()
 const CounterProduct = useCounterProduct();

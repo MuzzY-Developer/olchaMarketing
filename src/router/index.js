@@ -20,15 +20,13 @@ const router = createRouter({
       component: () => import("@/views/Products.vue"),
       beforeEnter(to, from) {
         const CounterProduct = useCounterProduct();
-        CounterProduct.getFetchProductsAll();
-        const exists = CounterProduct.productall?.find(
-          (item) => item.id == to.params.id
-        );
+        const exists = to.params.id <= CounterProduct?.total && to.params.id > 0;
         if (!exists) {
           return {
             name: "notfound",
             params: { pathMatch: to.path.split("/").slice(1) },
             query: to.query,
+            hash: to.hash,
           };
         }
       },
