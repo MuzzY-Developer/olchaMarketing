@@ -3,6 +3,9 @@
     flex-direction: column;
     gap:50px;
     padding:10px 50px;
+    @media screen and (max-width:480px) {
+      padding:0px 5px;
+  }
     &__logo{
       font-size: 32px
     }

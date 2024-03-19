@@ -44,15 +44,7 @@ function notfound(){
 notfound()
 const sort = ref("Auto");
 
-watch(sort, () => {
-  if (sort.value == "Auto") {
-    CounterProduct.sortproductdefauld();
-  } else if (sort.value == "Rating") {
-    CounterProduct.sortproductReyting();
-  } else if (sort.value == "Price") {
-    CounterProduct.sortproductPrice();
-  }
-});
+
 
 </script>
 
@@ -78,17 +70,6 @@ watch(sort, () => {
       </template>
     </vue-awesome-paginate>
     <div class="pagination__sort">
-      <select class="pagination__sort-2" v-model="sort">
-        <option class="CategoryPages__sort-2__option" value="Auto">
-          {{ leng.sortautotext }}
-        </option>
-        <option class="CategoryPages__sort-2__option" value="Rating">
-          {{ leng.sortratingtext }}
-        </option>
-        <option class="CategoryPages__sort-2__option" value="Price">
-          {{ leng.sortpricetext }}
-        </option>
-      </select>
     </div>
     <div class="pagination-cards">
       <Card

@@ -1,7 +1,4 @@
-import {
-    ref,
-    computed
-} from 'vue'
+
 import {
     defineStore
 } from 'pinia'
@@ -45,8 +42,11 @@ export const useLeng = defineStore('useleng', {
         hdcatalog: "Каталог",
         hdbasket: "Корзина",
         hdaccount: "Войти",
+        hdexit:"Выйти",
         hdtoorder:"Заказать",
+        hdclear:"Очистить",
         hdpoisktext:"Поиск по каталогу",
+       
         //    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~Card
         pricetextcard:"Цена:",
         abouttextcard:"Подробно",
@@ -100,6 +100,8 @@ export const useLeng = defineStore('useleng', {
                 this.hdcatalog = "Katalog",
                 this.hdbasket = "Savat",
                 this.hdaccount = "Kirish",
+                this.hdexit="Chiqish",
+                this.hdclear="Tozalash"
                 this.hdtoorder="Buyurtma",
                 this.hdpoisktext="Katalog bo'yicha qidirish",
                 this.pricetextcard="Narxi:",
@@ -142,7 +144,9 @@ export const useLeng = defineStore('useleng', {
                 this.hdcatalog = "Каталог",
                 this.hdbasket = "Корзина",
                 this.hdaccount = "Войти",
+                this.hdexit="Выйти",
                 this.hdtoorder="Заказать",
+                this.hdclear="Очистить",
                 this.hdpoisktext="Поиск по каталогу",
                 this.pricetextcard="Цена:",
                 this.abouttextcard="Подробно",

@@ -50,9 +50,9 @@ CounterStore.totalproductprice()
           </div>
         </div>
         <div class="header__basket-modal-bottom">
-          <button>{{ leng.hdtoorder }}</button>
-          <button @click="CounterStore.deleteTobasketAll()">Очистить</button>
-          <span>{{ CounterStore.totalprice}} $</span>
+          <button v-if="CounterStore.totalprice">{{ leng.hdtoorder }}</button>
+          <button @click="CounterStore.deleteTobasketAll()" v-if="CounterStore.totalprice">{{leng.hdclear}}</button>
+          <span v-if="CounterStore.totalprice">{{ CounterStore.totalprice}} $</span>
         </div>
       </div>
 

@@ -9,7 +9,7 @@ const CounterStore = useCounterStore()
 
 <template>
    <div class="header__navigation__products" v-show="CounterStore.searchmodal">
-            <RouterLink @click="CounterProduct.getFetchProductsid(item.id),(modal = false),(CounterStore.bgblack = false),CounterStore.bodyhiddenclosed()"
+            <RouterLink @click="CounterProduct.getFetchProductsid(item.id),(CounterStore.searchmodal = false),(CounterStore.bgblack = false),CounterStore.bodyhiddenclosed()"
               class="header__navigation__products-card"
               v-for="item in CounterProduct.product"
               :key="item.id"

@@ -4,7 +4,7 @@ import { useLeng } from '@/stores/Lenguage';
 import { ref } from 'vue';
 const CounterStore = useCounterStore()
 const leng = useLeng()
-let login = ref("")
+const login = ref("")
 const parol = ref("")
 
 function clearlogpas(){

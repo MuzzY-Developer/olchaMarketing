@@ -130,8 +130,7 @@ export const useCounterStore = defineStore("counter", {
     },
     loginparol() {
       if (
-        this.login.length == this.name.length &&
-        this.parol == this.password
+        this.login.length == this.name.length && this.parol == this.password
       ) {
         (this.login = ""),
           (this.parol = ""),
@@ -144,7 +143,7 @@ export const useCounterStore = defineStore("counter", {
           (this.accountuseractive = false),
           (this.accountusernonactive = true),
           document.body.classList.remove("activebody");
-      } else {
+      } else if(this.login.length !== this.name.length && this.parol !== this.password) {
         this.accountemodal = true;
         this.accountfalse = true;
         this.accounttrue = false;
@@ -158,8 +157,8 @@ export const useCounterStore = defineStore("counter", {
     },
     exituser() {
       this.accountemodal = false;
-      this.accountfalse = true;
-      this.accounttrue = false;
+      this.accountfalse = false;
+      this.accounttrue = true;
       (this.basketuseractive = true), (this.basketusernonactive = false);
       (this.basketuseractive = false),
         (this.basketusernonactive = true),

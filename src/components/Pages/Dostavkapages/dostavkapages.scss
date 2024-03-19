@@ -1,5 +1,8 @@
 .dostavkapages{
     padding:0px 50px;
+    @media screen and (max-width:480px) {
+        padding:0px 5px;
+    }
     &__text-1{
      font-size: 32px;
      font-weight: 600;

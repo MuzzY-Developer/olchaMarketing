@@ -125,27 +125,6 @@ export const useCounterProduct = defineStore("product", {
         return 1;
       });
     },
-    sortproductdefauld() {
-      this.product.sort((a, b) => {
-        return a.id - b.id;
-      });
-
-    },
-    sortproductReyting() {
-      this.product.sort((a, b) => {
-        return b.rating - a.rating;
-      });
-
-    },
-    sortproductPrice() {
-      this.product.sort((a, b) => {
-        if (a.price > b.price) {
-
-          return -1;
-        }
-        return 1;
-      });
-    },
   },
   persist: true,
 });

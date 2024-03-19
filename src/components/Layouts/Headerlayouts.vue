@@ -163,7 +163,7 @@ watch(
           >
             <img class="img1" src="@/assets/icons/exit1.svg" alt="" />
             <img class="img2" src="@/assets/icons/exit2.svg" alt="" />
-            <span>Выйти</span>
+            <span>{{ leng.hdexit}}</span>
           </button>
         </div>
       </div>
