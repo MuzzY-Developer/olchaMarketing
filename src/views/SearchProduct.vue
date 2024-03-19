@@ -47,26 +47,27 @@ notfound()
 
 <template>
   <section>
-    <vue-awesome-paginate
+    <vue-awesome-paginate 
       :total-items="+CounterProduct.total"
       :items-per-page="test"
       :max-pages-shown="3"
       v-model="currentPage"
       :on-click="onClickHandler"
-      class="pagination"
+      class="pagination" v-if="CounterProduct.product.length"
     >
-      <template #prev-button>
+      <template #prev-button >
         <span>
           <img class="icones" src="@/assets/icons/Leftstrelka.svg" alt="" />
         </span>
       </template>
       <template #next-button>
-        <span>
+        <span >
           <img class="icones" src="@/assets/icons/Rightstrelka.svg" alt="" />
         </span>
       </template>
     </vue-awesome-paginate>
-    <Empty v-if="!CounterProduct.product.length">
+
+      <div v-if="!CounterProduct.product.length">
       <section>
     <div class="notfound">
     <img src="@/assets/images/sorry.png" alt="">
@@ -78,8 +79,8 @@ notfound()
         <RouterLink to="/">{{ item.text3 }}</RouterLink>
        </div>
     </div>
-  </section>
-      </Empty>
+      </section>
+    </div>
     <div class="pagination-cards">
       <Card
         v-for="item in CounterProduct.product"
